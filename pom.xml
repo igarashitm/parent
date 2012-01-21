@@ -103,7 +103,7 @@
     <version.jbossas.console>1.1.0.FINAL</version.jbossas.console>
     <!-- Override versions for OpenShift. May use the same version as AS but -->
     <!-- maintaining this override for future flexibility -->
-    <version.jbossas.openshift>7.1.0.Final</version.jbossas.openshift>
+    <version.jbossas.openshift>7.1.1.Final</version.jbossas.openshift>
     <version.jettison>1.2</version.jettison>
     <version.jpa>1.0.2</version.jpa>
     <version.jta>1.1</version.jta>
@@ -851,6 +851,11 @@
       <dependency>
          <groupId>org.switchyard.quickstarts</groupId>
          <artifactId>switchyard-quickstart-hornetq-binding</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.switchyard.quickstarts</groupId>
+         <artifactId>switchyard-quickstart-hornetq-reference-binding</artifactId>
          <version>${project.version}</version>
       </dependency>
       <dependency>
