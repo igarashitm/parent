@@ -31,6 +31,9 @@
         <version.org.jboss.as>7.4.0.Final-redhat-19</version.org.jboss.as>
         <version.redhat.eap6.bom>6.3.0.GA</version.redhat.eap6.bom>
         <version.org.mvel>2.2.1.Final</version.org.mvel>
+        <version.wildfly.hornetq>2.4.1.Final</version.wildfly.hornetq>
+        <version.wildfly.netty>4.0.15.Final</version.wildfly.netty>
+        <version.wildfly.jgroups>3.3.4.Final</version.wildfly.jgroups>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -52,6 +55,13 @@
                 <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-parent</artifactId>
                 <version>${version.org.jboss.as}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-pom</artifactId>
+                <version>${version.wildfly.hornetq}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -343,6 +353,46 @@
                 <groupId>org.mvel</groupId>
                 <artifactId>mvel2</artifactId>
                 <version>${version.org.mvel}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-core-client</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-jms-client</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-server</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-jms-server</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-commons</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-journal</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${version.wildfly.netty}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jgroups</groupId>
+                <artifactId>jgroups</artifactId>
+                <version>${version.wildfly.jgroups}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -69,6 +69,9 @@
         <version.org.jvnet.mock-javamail>1.9</version.org.jvnet.mock-javamail>
         <version.net.sf.dozer>5.4.0</version.net.sf.dozer>
         <version.org.fusesource.mqtt-client>1.6</version.org.fusesource.mqtt-client>
+        <version.wildfly.hornetq>2.4.1.Final</version.wildfly.hornetq>
+        <version.wildfly.netty>4.0.15.Final</version.wildfly.netty>
+        <version.wildfly.jgroups>3.4.3.Final</version.wildfly.jgroups>
         <!--  RiftSaw -->
         <version.activity.monitor.model>1.2.2.Final</version.activity.monitor.model>
         <version.overlord-commons>2.0.2.Final</version.overlord-commons>
@@ -706,6 +709,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-pom</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--  ###################################################################
       ##      Dependencies coming in Integration BOM 6.0.0.CR13        ##
       ################################################################### -->
@@ -957,6 +967,47 @@
                 <version>${version.org.jboss.as}</version>
                 <type>zip</type>
             </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-core-client</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-jms-client</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-server</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-jms-server</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-commons</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hornetq</groupId>
+                <artifactId>hornetq-journal</artifactId>
+                <version>${version.wildfly.hornetq}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${version.wildfly.netty}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jgroups</groupId>
+                <artifactId>jgroups</artifactId>
+                <version>${version.wildfly.jgroups}</version>
+            </dependency>
+            
             <!--  ###################################################################
       ##                    Riftsaw Dependencies                       ##
       ################################################################### -->
